@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сервис нотификаций</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Блок 1: Чекбоксы -->
+        <div class="block checkboxes">
+            <h3>Типы уведомлений</h3>
+            <label><input type="checkbox"> SMS</label>
+            <label><input type="checkbox" checked> Email</label>
+            <label><input type="checkbox"> In-App</label>
+			<label><input type="checkbox"> Push</label>
+        </div>
+
+        <!-- Блок 2:Cообщение -->
+        <div class="block message-settings">
+            <h3>Cообщение и настройки</h3>
+            <textarea placeholder="Текст сообщения..." style="width: 790px; height: 241px;"></textarea>
+			<div class="block-send-message">
+            <input type="datetime-local" id="schedule">
+			<button id="send-button">Отправить в очередь</button>
+			</div>
+        </div>
+
+        <!-- Блок 3: История -->
+        <div class="block history">
+            <h3>История сообщений</h3>
+            <div class="history-list">
+                <p>12.05.2023 14:30: Отправлено SMS</p>
+                <p>11.05.2023 10:15: Ошибка Email</p>
+            </div>
+        </div>
+    </div>
+<script src="/static/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <form action="/send" method="POST">
+	<input type="text" name="message" placeholder="Ваше сообщение" required>
+	<button type="submit">Отправить</button>
+	</form>
+	<div id="message">
+		<h2>Cooбщение:</h2>
+		<ul id="messages-list"></ul>
+	</div>
+	<script src="/static/script.js"></script> -->
